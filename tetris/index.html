@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mini Game Tetris</title>
+<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <div id="tetris">
+    <div id="menu">
+      <p id="start"><a href="javascript:play();">Press Space to Play.</a></p>
+      <p><canvas id="upcoming"></canvas></p>
+      <p>Score : <span id="score">00000</span></p>
+      <p>Rows : <span id="rows">0</span></p>
+    </div>
+    <canvas id="canvas">
+      Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
+    </canvas>
+    <a href="start.html"><button class="button" id="play-button">BACK</button></a>
+  </div>
+  
+  <script src="stats.js"></script>
+  <script src="tetris.js"></script>
+  
+</body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ular Melintar Lintar</title>
+    <link
+      rel="stylesheet"
+      id="style"
+      type="text/css"
+      href="./css/main-snake.css"
+    />
+    <link rel="shortcut icon" href="css/images/favicon.png" />
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- ... -->
+    </head>
+
+    <style>
+      .snake-toolbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 10000;
+        padding: 5px;
+        width: 100%;
+      }
+
+      @media (max-width: 768px) {
+        .snake-toolbar {
+          padding: 10px; 
+        }
+      }
+
+      @media (max-width: 480px) {
+        .snake-toolbar {
+          padding: 5px;
+        }
+      }
+      .back-button {
+        display: inline-block;
+        padding: 5px 10px;
+        margin-left: 15px;
+        background-color: #007BFF;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        text-align: center;
+      }
+      
+      .back-button:hover {
+        background-color: #b30062; 
+      }
+      
+    </style>
+    <script>
+      function getTheme() {
+        function changeTheme(themeUrl) {
+          var elm = document.getElementById("style");
+          elm && elm.remove();
+
+          var newCss = document.createElement("link");
+          newCss.id = "style";
+          newCss.rel = "stylesheet";
+          newCss.type = "text/css";
+          newCss.href = themeUrl;
+          document.head.appendChild(newCss);
+        }
+        var index = document.getElementById("select").selectedIndex;
+        switch (index) {
+          case 0:
+            changeTheme("css/light-snake.css?" + Math.random());
+            break;
+          case 1:
+            changeTheme("css/main-snake.css?" + Math.random());
+            break;
+          case 2:
+            changeTheme("css/dark-snake.css?" + Math.random());
+            break;
+          case 3:
+            changeTheme("css/green-snake.css?" + Math.random());
+            break;
+          case 4:
+            changeTheme("css/matrix-snake.css?" + Math.random());
+            break;
+          case 5:
+            changeTheme("css/Senura-snake.css?" + Math.random());
+            break;
+          case 6:
+            changeTheme("css/head-snake.css?" + Math.random());
+            break;
+          default:
+            changeTheme("css/main-snake.css?" + Math.random());
+            break;
+        }
+        setTimeout(function () {
+          document.getElementById("game-area").focus();
+        }, 10);
+      }
+
+      if (navigator.onLine && window.location.hostname === "***") {
+        var _gaq = _gaq || [];
+        _gaq.push(["_setAccount", "UA-3312460-1"]);
+        _gaq.push(["_trackPageview"]);
+
+        (function () {
+          var ga = document.createElement("script");
+          ga.type = "text/javascript";
+          ga.async = true;
+          ga.src =
+            ("https:" == document.location.protocol
+              ? "https://ssl"
+              : "http://www") + ".google-analytics.com/ga.js";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(ga, s);
+        })();
+      }
+    </script>
+  </head>
+  <body>
+    <div class="snake-toolbar">
+      <div style="display: inline-block; margin-right: 10px">
+        <span>Theme:</span>
+        <select autocomplete="off" onchange="getTheme()" id="select">
+          <option>Light Theme by Ridho</option>
+          <option selected>Main Theme by Fazri</option>
+          <option>Dark Theme by Fazri</option>
+          <option>Green Theme by Akmal</option>
+          <option>Matrix Theme by Akmal</option>
+          <option>Ungu Theme by Senura Fazri</option>
+          <option>Snake Head Theme by Jeni</option>
+        </select>
+      </div>
+      <div style="display: inline-block; margin-right: 10px">
+        <span>Mode:</span>
+        <select id="selectMode">
+          <option value="100">Mudah</option>
+          <option value="75" selected>Sedang</option>
+          <option value="50">Saroh</option>
+          <option value="25">dak mungken</option>
+          <option value="110">Santaii</option>
+        </select>
+      </div>
+      <button onclick="go_full_screen()">Full Screen</button><br />
+      <a href="../../desain/ulat.html" class="back-button">Back</a>
+      <br />
+    </div>
+
+    <div id="mode-wrapper" style="display: inline; width: auto"></div>
+
+    <div id="game-area" tabindex="0"></div>
+    <script type="text/javascript" src="./js/snake.js"></script>
+    <script type="text/javascript" src="./js/init.js"></script>
+    <script type="text/javascript">
+      function go_full_screen() {
+        var elem = document.documentElement;
+        try {
+          if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+          } else if (elem.msRequestFullscreen) {
+            elem.msRequestFullscreen();
+          } else if (elem.mozRequestFullScreen) {
+            elem.mozRequestFullScreen();
+          } else if (elem.webkitRequestFullscreen) {
+            elem.webkitRequestFullscreen();
+          }
+
+          function go_full_screen() {
+  var elem = document.documentElement;
+  if (isMobile()) { // Deteksi jika di perangkat mobile
+    try {
+      if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+      } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+      } else if (elem.mozRequestFullScreen) {
+        elem.mozRequestFullScreen();
+      } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Fullscreen tidak didukung pada perangkat ini.");
+    }
+  }
+}
+
+function isMobile() {
+  return /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+}
+
+
+        } catch (err) {
+          console.error(err);
+          alert("Sorry, fullscreen won't work in this setup.");
+        }
+        function move(direction) {
+  // Misal ada fungsi `mySnake.handleArrowKeys` yang menggerakkan ular
+  switch (direction) {
+    case 'up':
+      mySnake.handleArrowKeys(38); // Kode tombo
+      break;
+    case 'down':
+      mySnake.handleArrowKeys(40); 
+      break;
+    case 'left':
+      mySnake.handleArrowKeys(37); 
+      break;
+    case 'right':
+      mySnake.handleArrowKeys(39); 
+      break;
+  }
+}
+
+
+
+      }
+    </script>
+  </body>
+</html>

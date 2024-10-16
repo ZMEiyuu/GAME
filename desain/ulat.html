@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@700&display=swap');
+
+        .puzzle-background {
+            background-image: url('https://images8.alphacoders.com/810/810904.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .header {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 2.5rem;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            margin-bottom: 40px;
+        }
+        
+        body {
+            text-shadow: 4px 4px 8px black;
+            overflow-x: hidden; /* Disabling horizontal scroll */
+        }
+
+        .hallo {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 2rem; /* Responsif font size */
+            color: #fff;
+            padding: 1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 640px) {
+            .header {
+                font-size: 2rem; /* Lebih kecil untuk layar kecil */
+            }
+            .hallo {
+                font-size: 10cap;
+            }
+            a {
+                padding: 1rem 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flex flex-col items-center justify-center min-h-screen space-y-6 puzzle-background">
+        <div class="header text-3xl sm:text-4xl md:text-5xl">ULAR MELINGKAR</div>
+        <div class="mt-6">
+            <a href="../snake/snakes/index.html" class="retro-button text-white font-roboto text-xl px-8 py-4 rounded-lg shadow-md hover:bg-black transition duration-300">PLAY</a>
+        </div>
+         <div class="mt-6">
+            
+        </div>
+        <div class="mt-6">
+            <a href="../home.html" class="retro-button text-white font-roboto text-xl px-8 py-4 rounded-lg shadow-white hover:bg-black transition duration-300">BACK TO MENU</a>
+        </div>
+        
+    </div>
+</body>
+</html>
