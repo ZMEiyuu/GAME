@@ -1,5 +1,5 @@
-body      { font-family: Helvetica, sans-serif; display: flex; overflow: hidden; padding: 20px 0;background-image: url(moza.jpg);}
-#tetris   { margin: 1em auto; padding: 1em; border: 1px solid rgb(0, 0, 0); border-radius: 10px; background-color: rgb(98, 73, 207);}
+body      { font-family: Helvetica, sans-serif; display: flex; padding: 2px 0;background-image: url(moza.jpg);}
+#tetris   { margin: auto; padding: 2em; border: 1px solid rgb(0, 0, 0); border-radius: 10px; background-color: rgb(98, 73, 207);}
 #stats    { display: inline-block; vertical-align: top; }
 #canvas   { display: inline-block; vertical-align: top; background: url(aim.jpg); border: 2px solid #333135; }
 #menu     { display: inline-block; vertical-align: top; position: relative; }
