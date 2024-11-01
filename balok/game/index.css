@@ -1,17 +1,17 @@
 body      { font-family: Helvetica, sans-serif; display: flex; padding: 2px 0;background-image: url(moza.jpg);}
-#tetris   { margin: auto; padding: 2em; border: 1px solid rgb(0, 0, 0); border-radius: 10px; background-color: rgb(98, 73, 207);}
+#tetris   { margin: auto; padding: 2em; border: 1px solid rgb(0, 0, 0); border-radius: 10px; background-color: rgb(0, 0, 0);}
 #stats    { display: inline-block; vertical-align: top; }
-#canvas   { display: inline-block; vertical-align: top; background: url(aim.jpg); border: 2px solid #333135; }
+#canvas   { display: inline-block; vertical-align: top; background: url(aim.jpg); border: 1px solid #000000; }
 #menu     { display: inline-block; vertical-align: top; position: relative; }
 #menu p   { margin: 0.5em 0; text-align: center; }
-#menu p a { text-decoration: none; color: rgb(242, 223, 223); }
-#upcoming { display: block; margin: 50px auto; background-image: url(aim.jpg); }
+#menu p a { text-decoration: none; color: rgb(255, 255, 255); }
+#upcoming { display: block; margin: 15px auto; background-image: url(aim.jpg); }
 .p, #menu {color: white;}
-#score    { color: gold; font-weight: bold; vertical-align: middle; padding: 10px;}
-#rows     { color: cyan; font-weight: bold; padding: 10px; }
+#score    { color: rgb(204, 174, 3); font-weight: bold; vertical-align: middle; padding: 10px;}
+#rows     { color: rgba(15, 194, 194, 0.527); font-weight: bold; padding: 10px; }
 #stats    { position: absolute; bottom: 0em; right: 1em; }
-.button {background-color: #3127e6; color: #fff; padding: 6px 10px; border: none; border-radius: 5px; cursor: pointer; margin: 10dpx;}
-.button:hover {background-color: #1b2960;}
+.button {background-color: rgba(20, 19, 19, 0.637); color: #fff; padding: 6px 10px; border: none; border-radius: 5px; cursor: pointer; margin: 10dpx;}
+.button:hover {background-color: #ffffff;}
 @media screen and (min-width:   0px) and (min-height:   0px)  { #tetris { font-size: 0.75em; width: 250px; } #menu { width: 100px; height: 200px; } #upcoming { width:  50px; height:  50px; } #canvas { width: 100px; height: 200px; } } /* 10px chunks */
 @media screen and (min-width: 400px) and (min-height: 400px)  { #tetris { font-size: 1.00em; width: 350px; } #menu { width: 150px; height: 300px; } #upcoming { width:  75px; height:  75px; } #canvas { width: 150px; height: 300px; } } /* 15px chunks */
 @media screen and (min-width: 500px) and (min-height: 500px)  { #tetris { font-size: 1.25em; width: 450px; } #menu { width: 200px; height: 400px; } #upcoming { width: 100px; height: 100px; } #canvas { width: 200px; height: 400px; } } /* 20px chunks */
