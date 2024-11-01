@@ -3,6 +3,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // base helper methods
     //-------------------------------------------------------------------------
 
+    if (isAndroid()) {
+      document.getElementById("androidButton").style.display = "block"; // Menampilkan tombol khusus Android
+  }
+  
+  // Atau
+  const androidOnlyStyles = document.createElement('style');
+  androidOnlyStyles.innerHTML = `
+      /* Gaya khusus Android */
+      body {
+          font-size: 1.2em;
+      }
+      #specialFeature {
+          display: block;
+      }
+  `;
+  if (isAndroid()) {
+      document.head.appendChild(androidOnlyStyles);
+  }
+  
+
     function get(id)        { return document.getElementById(id);  }
     function hide(id)       { get(id).style.visibility = 'hidden'; }
     function show(id)       { get(id).style.visibility = null;     }
