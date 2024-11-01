@@ -7,61 +7,47 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@700&display=swap');
-
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
         .puzzle-background {
-            background-image: url(start.png);
+            background-image: url('start.png');
             background-size: cover;
             background-position: center;
+            background-repeat: no-repeat;
+            width: 100vw;
+            height: 100vh;
         }
-
         .header {
             font-family: 'Permanent Marker', cursive;
             font-size: 2.5rem;
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-            margin-bottom: 40px;
+            text-align: center;
         }
-        
-        body {
-            text-shadow: 4px 4px 8px black;
-            overflow-x: hidden; /* Disabling horizontal scroll */
+        .retro-button {
+            font-family: 'Roboto', sans-serif;
         }
-
-        .hallo {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 2rem; /* Responsif font size */
-            color: #fff;
-            padding: 1rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 640px) {
+        @media (max-width: 768px) {
             .header {
-                font-size: 2rem; /* Lebih kecil untuk layar kecil */
+                font-size: 1.8rem;
             }
-            .hallo {
-                font-size: 10cap;
-            }
-            a {
-                padding: 1rem 2rem;
+            .puzzle-background {
+                background-size: cover;
             }
         }
     </style>
 </head>
 <body>
-    <div class="flex flex-col items-center justify-center min-h-screen space-y-6 puzzle-background">
-        <div class="header text-3xl sm:text-4xl md:text-5xl">ULAR MELINGKAR</div>
-        <div class="mt-6">
-            <a href="../snake/snakes/index.html" class="retro-button text-white font-roboto text-xl px-8 py-4 rounded-lg shadow-md hover:bg-black transition duration-300">PLAY</a>
+    <div class="flex flex-col items-center justify-center min-h-screen space-y-8 puzzle-background">
+        <div class="header text-2xl sm:text-3xl md:text-4xl lg:text-5xl"><b>ULAR MELINGKAR</b></div>
+        <div class="space-y-4">
+            <a href="../snake/snakes/index.html" class="retro-button text-white text-lg sm:text-xl px-6 py-3 rounded-lg shadow-md bg-blue-500 hover:bg-blue-700 transition-all">Play</a>
+            <a href="../index.html" class="retro-button text-white text-lg sm:text-xl px-6 py-3 rounded-lg shadow-md bg-blue-500 hover:bg-blue-700 transition-all">Back To Menu</a>
         </div>
-         <div class="mt-6">
-            
-        </div>
-        <div class="mt-6">
-            <a href="../index.html" class="retro-button text-white font-roboto text-xl px-8 py-4 rounded-lg shadow-white hover:bg-black transition duration-300">BACK TO MENU</a>
-        </div>
-        
     </div>
 </body>
 </html>

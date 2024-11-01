@@ -1,5 +1,4 @@
-body      { font-family: Helvetica, sans-serif; height: 100vh; margin: auto; background-image: url(moza.jpg);}
-html, body{ margin: 0; padding: 0; height: 100%; overflow: hidden;}
+body      { font-family: Helvetica, sans-serif; height: 100vh; margin: 0; padding: 2px; background-image: url(moza.jpg);}
 #tetris   { margin: auto; padding: 2em; border: 1px solid rgb(0, 0, 0); border-radius: 10px; background-color: rgb(0, 0, 0);}
 #stats    { display: inline-block; vertical-align: top; }
 #canvas   { display: inline-block; vertical-align: top; background: url(aim.jpg); border: 1px solid #000000; }
