@@ -29,25 +29,23 @@
             text-align: center;
         }
         .retro-button {
-            font-family: 'Roboto', sans-serif;
-        }
-        @media (max-width: 768px) {
-            .header {
-                font-size: 1.8rem;
-            }
-            .puzzle-background {
-                background-size: cover;
-            }
+            background-color: #b30505;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
     <div class="flex flex-col items-center justify-center min-h-screen space-y-8 puzzle-background">
-        <div class="header text-2xl sm:text-3xl md:text-4xl lg:text-5xl"><b>GAME JADUL</b></div>
-        <div class="space-y-4">
-            <a href="desain/ulat.html" class="retro-button text-white text-lg sm:text-xl px-6 py-3 rounded-lg shadow-md bg-blue-500 hover:bg-blue-700 transition-all">ULAT</a>
-            <a href="balok/start.html" class="retro-button text-white text-lg sm:text-xl px-6 py-3 rounded-lg shadow-md bg-blue-500 hover:bg-blue-700 transition-all">TETRIS</a>
-        </div>
+        <div class="header"><b>GAME JADUL</b></div>
+        
+            <a href="desain/ulat.html" class="retro-button">ULAT</a>
+            <a href="balok/start.html" class="retro-button">TETRIS</a>
+        
     </div>
 </body>
 </html>

@@ -29,10 +29,6 @@ body {
     margin: 10px;
 }
 
-.button:hover {
-    background-color: #fdfdfd;
-}
-
 .header {
     font-family: 'Permanent Marker', cursive;
     font-size: 2.5rem;
